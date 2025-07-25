@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+@property --font-size {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 18vmin;
+}
+
+@property --offset-x {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 2px;
+}
+
+@property --offset-y {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  --blur: 0.5px;
+  --color-text: #f9d423ef;
+  --color-bg: #f16529;
+  --color-light: #ffffffee;
+  --color-darken: #00000070;
+  --color-shadow: #c21500;
+  --color-shadow-light: #ffffff70;
+  --color-shadow-darken: #c21500ee;
+  height: 100%;
+  min-width: 980px;
+  background-color: var(--color-bg);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Luckiest Guy';
+  font-size: var(--font-size);
+  line-height: 1;
+  letter-spacing: 5px;
+  color: var(--color-text);
+  text-shadow: var(--offset-x) calc(var(--offset-y) * -1) var(--blur) var(--color-light),
+    calc(var(--offset-x) * -1) var(--offset-y) var(--blur) var(--color-darken),
+    calc(var(--font-size) / -12) calc(var(--font-size) / 12) calc(var(--font-size) / 24) var(--color-shadow);
+}
+
+.content {
+  padding-left: var(--font-size);
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: calc(var(--font-size) / 5);
+  color: var(--color-bg);
+  text-shadow: -1px -1px 1px var(--color-shadow-darken),
+    1px 1px 1px var(--color-shadow-light);
+}
